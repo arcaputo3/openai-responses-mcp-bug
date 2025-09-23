@@ -38,11 +38,9 @@ This bug prevents MCP tools from returning structured multi-part responses, seve
     uv sync
     ```
 
-3. **Set up environment variables:**
+3. **Create `.env` file with your OpenAI API key:**
     ```bash
-    # Create .env file
     echo "OPENAI_API_KEY=your-api-key-here" > .env
-    echo "NGROK_AUTHTOKEN=your-ngrok-token-here" >> .env
     ```
 
 4. **Start the MCP server:**
@@ -60,7 +58,7 @@ This bug prevents MCP tools from returning structured multi-part responses, seve
 
 6. **Copy the HTTPS URL from ngrok and add it to your `.env` file:**
     ```bash
-    # Add to .env file
+    # Add this line to your .env file
     MCP_URL=https://abc123.ngrok.io
     ```
 
