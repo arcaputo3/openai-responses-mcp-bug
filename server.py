@@ -9,17 +9,10 @@ mcp = FastMCP(name="Test MCP Server")
 @mcp.tool
 def get_content() -> list[TextContent]:
     """Return two text samples. OpenAI will only see the first one."""
-    result = [
-        {
-            "type": "text",
-            "text": "This is the text description that should appear first.",
-        },
-        {
-            "type": "text",
-            "text": "This is the text description that should appear second.",
-        },
+    return [
+        TextContent(type="text", text="This is the text description that should appear first."),
+        TextContent(type="text", text="This is the text description that should appear second."),
     ]
-    return [TextContent.model_validate(result) for result in result]
 
 
 # Run the server (defaults to http://localhost:8000)
