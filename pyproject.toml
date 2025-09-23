@@ -1,0 +1,6 @@
+[project]
+name = "openai-responses-mcp-bug"
+version = "0.1.0"
+description = "Demonstrates a bug with MCP handling via the OpenAI Responses API"
+requires-python = ">=3.12"
+dependencies = ["fastmcp==2.12.3", "openai==1.108.2"]
